@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="style.css">
+    
+    <title>{% block title %}{% endblock %} - Meu projeto</title>
+
+</head>
+
+<body>
+    <div class="barralateral">
+        <nav>
+            <ul>
+                <li><a href="{{ url_for('index') }}">Home</a></li>
+                <li><a href="{{ url_for('page1') }}">Projetos</a></li>
+                <li><a href="{{ url_for('page2') }}">O que gosto de fazer</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="content">
+        {% block content %}{% endblock %}
+    </div>
+
+</body>
+
+</html>
